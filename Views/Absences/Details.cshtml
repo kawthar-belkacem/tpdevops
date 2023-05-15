@@ -1,0 +1,42 @@
+﻿@model projetdotnet.Models.Absence
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Absence</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DA)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DA)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.matiere)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.matiere)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.seance)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.seance)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.justificatif)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.justificatif)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id_Ab">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

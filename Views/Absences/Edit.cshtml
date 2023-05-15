@@ -1,0 +1,49 @@
+﻿@model projetdotnet.Models.Absence
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Absence</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id_Ab" />
+            <div class="form-group">
+                <label asp-for="DA" class="control-label"></label>
+                <input asp-for="DA" class="form-control" />
+                <span asp-validation-for="DA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="matiere" class="control-label"></label>
+                <input asp-for="matiere" class="form-control" />
+                <span asp-validation-for="matiere" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="seance" class="control-label"></label>
+                <input asp-for="seance" class="form-control" />
+                <span asp-validation-for="seance" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="justificatif" class="control-label"></label>
+                <input asp-for="justificatif" class="form-control" />
+                <span asp-validation-for="justificatif" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

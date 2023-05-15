@@ -1,0 +1,45 @@
+﻿@model projetdotnet.Models.Absence
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Absence</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DA)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DA)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.matiere)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.matiere)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.seance)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.seance)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.justificatif)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.justificatif)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id_Ab" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>
